@@ -21,38 +21,27 @@ Academic research memory management skill for tracking project continuity, decis
 
 ## Installation
 
-### Quick Install (Recommended)
+In Claude Code, register the marketplace first:
 
-```bash
-curl -sSL https://raw.githubusercontent.com/syfyufei/adrian-marketplace/main/install.sh | bash
-```
-
-### Manual Installation
-
-**Option 1: From GitHub**
-
-```bash
-git clone https://github.com/syfyufei/adrian-marketplace.git
-cd adrian-marketplace
-claude plugin marketplace add .
-claude plugin install adrian-skills@adrian-skills-marketplace
-```
-
-**Option 2: Direct Marketplace Add**
-
-In Claude Code session:
 ```bash
 /plugin marketplace add syfyufei/adrian-marketplace
+```
+
+Then install the plugin from this marketplace:
+
+```bash
 /plugin install adrian-skills@adrian-skills-marketplace
 ```
 
 ### Verify Installation
 
-```bash
-claude plugin list
+After installation, test a skill in Claude Code:
+
+```
+"Research Memory, help me get back up to speed with my project"
 ```
 
-You should see `adrian-skills` in the installed plugins list.
+All skills will be available for use immediately.
 
 ## Structure
 
