@@ -14,18 +14,29 @@ Academic research memory management skill for tracking project continuity, decis
 
 **Usage:**
 
-Slash commands:
+Core commands:
 ```bash
 /research-memory:bootstrap    # Restore project context
-/research-memory:remember          # Log current session
+/research-memory:status       # Quick status overview
+/research-memory:remember     # Remember current session
 /research-memory:query        # Search history
+```
+
+Analysis & reporting:
+```bash
+/research-memory:timeline     # Show project timeline
+/research-memory:summary      # Generate full summary
+/research-memory:review       # Review time period
+/research-memory:insights     # Get AI insights
+/research-memory:checkpoint   # Create checkpoint
 ```
 
 Natural language:
 ```
 "Research Memory, help me get back up to speed with my project"
-"Log this work session to Research Memory"
-"Search for our decisions about spatial lag models"
+"Show me a quick status"
+"Remember this work session"
+"Generate a project summary for my weekly meeting"
 ```
 
 ## Installation
@@ -51,10 +62,16 @@ Check that commands appear:
 ```
 
 ```
-# Should see:
+# Should see 9 commands:
 # /research-memory:bootstrap - Restore project context and generate work plan
-# /research-memory:remember - Log current work session to research memory
+# /research-memory:status - Quick project status overview
+# /research-memory:remember - Remember current work session
 # /research-memory:query - Query research memory history
+# /research-memory:timeline - Visualize project timeline
+# /research-memory:summary - Generate comprehensive project summary
+# /research-memory:review - Review work in a specific time period
+# /research-memory:insights - Get AI-powered insights and suggestions
+# /research-memory:checkpoint - Create a named checkpoint of current state
 ```
 
 All skills will be available for use immediately via slash commands or natural language.
