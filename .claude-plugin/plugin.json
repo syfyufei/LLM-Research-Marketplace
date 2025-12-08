@@ -1,13 +1,13 @@
 {
-  "name": "adrian-skills",
-  "description": "Adrian's curated collection of Claude Code skills for research and development",
+  "name": "llm-research",
+  "description": "LLM Research Marketplace - Curated collection of Claude Code skills for AI/LLM research and development",
   "version": "1.0.0",
   "author": {
     "name": "Adrian",
     "email": "syfyufei@gmail.com"
   },
-  "homepage": "https://github.com/syfyufei/adrian-marketplace",
-  "repository": "https://github.com/syfyufei/adrian-marketplace",
+  "homepage": "https://github.com/syfyufei/llm-research-marketplace",
+  "repository": "https://github.com/syfyufei/llm-research-marketplace",
   "license": "MIT",
-  "keywords": ["skills", "research", "productivity", "development"]
+  "keywords": ["llm", "research", "skills", "productivity", "development", "ai"]
 }

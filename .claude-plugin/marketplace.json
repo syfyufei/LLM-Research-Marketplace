@@ -1,14 +1,14 @@
 {
-  "name": "adrian-skills-marketplace",
-  "description": "Adrian's curated marketplace of Claude Code skills",
+  "name": "LLM-Research-Marketplace",
+  "description": "Curated marketplace of Claude Code skills for AI/LLM research and development",
   "owner": {
     "name": "Adrian",
     "email": "syfyufei@gmail.com"
   },
   "plugins": [
     {
-      "name": "adrian-skills",
-      "description": "Collection of skills for research and development workflows",
+      "name": "llm-research",
+      "description": "Collection of skills for AI/LLM research and development workflows",
       "version": "1.0.0",
       "source": "./",
       "author": {

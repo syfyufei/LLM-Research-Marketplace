@@ -4,12 +4,12 @@ This document explains the relationship between the two repositories and how the
 
 ## Two-Repository Architecture
 
-### 1. adrian-marketplace (This Repository)
-**Purpose**: Monorepo marketplace containing multiple skills
+### 1. llm-research-marketplace (This Repository)
+**Purpose**: Monorepo marketplace containing multiple LLM research skills
 
 **Structure**:
 ```
-adrian-marketplace/
+llm-research-marketplace/
 ├── .claude-plugin/
 │   ├── marketplace.json      # Defines the marketplace
 │   └── plugin.json          # Defines this as a plugin
@@ -21,7 +21,7 @@ adrian-marketplace/
 
 **Installation**:
 - Users install ALL skills together from this marketplace
-- Command: `claude plugin install adrian-skills@adrian-skills-marketplace`
+- Command: `claude plugin install llm-research@LLM-Research-Marketplace`
 - Best for: Users who want the complete skills collection
 
 ### 2. research-memory (Separate Repository)
@@ -57,7 +57,7 @@ The `research-memory.md` file exists in both repositories:
    - Contains the skill definition with tools and documentation
    - Maintained and updated in the research-memory repository
 
-2. **Marketplace Copy**: `adrian-marketplace/skills/research-memory.md`
+2. **Marketplace Copy**: `llm-research-marketplace/skills/research-memory.md`
    - Copied from the source of truth
    - Updated when syncing the marketplace
    - Allows users to install from the marketplace
@@ -69,10 +69,10 @@ When updating skills in the marketplace:
 ```bash
 # Copy updated skill from research-memory to marketplace
 cp /path/to/research-memory/skills/research-memory.md \
-   /path/to/adrian-marketplace/skills/
+   /path/to/llm-research-marketplace/skills/
 
 # Commit and push marketplace
-cd adrian-marketplace
+cd llm-research-marketplace
 git add skills/research-memory.md
 git commit -m "Update research-memory skill"
 git push
@@ -84,7 +84,7 @@ git push
 
 ```bash
 # One-command install all skills
-curl -sSL https://raw.githubusercontent.com/syfyufei/adrian-marketplace/main/install.sh | bash
+curl -sSL https://raw.githubusercontent.com/syfyufei/llm-research-marketplace/main/install.sh | bash
 ```
 
 **Pros**:
@@ -115,7 +115,7 @@ curl -sSL https://raw.githubusercontent.com/syfyufei/research-memory/main/instal
 
 ```bash
 # For marketplace development
-cd /path/to/adrian-marketplace
+cd /path/to/llm-research-marketplace
 ./install.sh
 
 # For skill development
@@ -136,13 +136,13 @@ cd /path/to/research-memory
 
 ### Marketplace Configuration Files
 
-**adrian-marketplace/.claude-plugin/marketplace.json**:
+**llm-research-marketplace/.claude-plugin/marketplace.json**:
 ```json
 {
-  "name": "adrian-skills-marketplace",
+  "name": "LLM-Research-Marketplace",
   "plugins": [
     {
-      "name": "adrian-skills",
+      "name": "llm-research",
       "source": "./"
     }
   ]
@@ -151,11 +151,11 @@ cd /path/to/research-memory
 - Defines the marketplace
 - Points to the current directory as the plugin source
 
-**adrian-marketplace/.claude-plugin/plugin.json**:
+**llm-research-marketplace/.claude-plugin/plugin.json**:
 ```json
 {
-  "name": "adrian-skills",
-  "description": "Collection of skills..."
+  "name": "llm-research",
+  "description": "Collection of LLM research skills..."
 }
 ```
 - Defines the marketplace itself as a plugin
@@ -210,7 +210,7 @@ cd /path/to/research-memory
 1. Copy skill definition:
    ```bash
    cp /path/to/new-skill/skills/new-skill.md \
-      /path/to/adrian-marketplace/skills/
+      /path/to/llm-research-marketplace/skills/
    ```
 
 2. Update marketplace README:
@@ -219,7 +219,7 @@ cd /path/to/research-memory
 
 3. Commit and push:
    ```bash
-   cd adrian-marketplace
+   cd llm-research-marketplace
    git add skills/new-skill.md README.md
    git commit -m "Add new-skill to marketplace"
    git push
@@ -229,7 +229,7 @@ cd /path/to/research-memory
 
 ```bash
 # Test marketplace installation
-cd adrian-marketplace
+cd llm-research-marketplace
 ./install.sh
 
 # Test standalone installation
@@ -241,7 +241,7 @@ cd new-skill
 
 ### Marketplace Versioning
 
-Update version in `adrian-marketplace/.claude-plugin/plugin.json`:
+Update version in `llm-research-marketplace/.claude-plugin/plugin.json`:
 ```json
 {
   "version": "1.1.0"

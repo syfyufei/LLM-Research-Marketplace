@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Adrian Skills Installation Script
-# Installs the complete skills collection
+# LLM Research Marketplace Installation Script
+# Installs the complete LLM research skills collection
 
 set -e
 
-echo "🚀 Installing Adrian Skills..."
+echo "🚀 Installing LLM Research Marketplace..."
 
 # Check if running from the repository directory
 if [ -f ".claude-plugin/marketplace.json" ] && [ -d "skills" ]; then
@@ -22,22 +22,22 @@ if [ "$LOCAL_INSTALL" = true ]; then
     echo "🔧 Adding local marketplace from: $MARKETPLACE_PATH"
     claude plugin marketplace add "$MARKETPLACE_PATH"
 
-    echo "📦 Installing Adrian Skills plugin..."
-    claude plugin install adrian-skills@adrian-skills-marketplace
+    echo "📦 Installing LLM Research Marketplace plugin..."
+    claude plugin install llm-research@LLM-Research-Marketplace
 else
     # Remote installation
     TEMP_DIR=$(mktemp -d)
     cd "$TEMP_DIR"
 
-    echo "📥 Cloning adrian-marketplace from GitHub..."
-    git clone https://github.com/syfyufei/adrian-marketplace.git
-    cd adrian-marketplace
+    echo "📥 Cloning llm-research-marketplace from GitHub..."
+    git clone https://github.com/syfyufei/llm-research-marketplace.git
+    cd llm-research-marketplace
 
     echo "🔧 Adding marketplace..."
     claude plugin marketplace add .
 
-    echo "📦 Installing Adrian Skills plugin..."
-    claude plugin install adrian-skills@adrian-skills-marketplace
+    echo "📦 Installing LLM Research Marketplace plugin..."
+    claude plugin install llm-research@LLM-Research-Marketplace
 
     echo "🧹 Cleaning up temporary files..."
     cd ~
@@ -45,7 +45,7 @@ else
 fi
 
 echo ""
-echo "✨ Adrian Skills installed successfully!"
+echo "✨ LLM Research Marketplace installed successfully!"
 echo ""
 echo "📚 Available Skills:"
 echo "   - research-memory: Academic research memory management"
@@ -56,5 +56,5 @@ echo "   'Log this work session to Research Memory'"
 echo ""
 echo "📚 Commands:"
 echo "   - List plugins: claude plugin list"
-echo "   - Update: claude plugin update adrian-skills"
-echo "   - Uninstall: claude plugin uninstall adrian-skills"
+echo "   - Update: claude plugin update llm-research"
+echo "   - Uninstall: claude plugin uninstall llm-research"

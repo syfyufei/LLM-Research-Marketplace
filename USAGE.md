@@ -1,4 +1,4 @@
-# Adrian Skills - Usage Guide
+# LLM Research Marketplace - Usage Guide
 
 ## Installation Verification
 
@@ -15,8 +15,8 @@ After running the install script, you can verify the installation in a Claude Co
 ```
 
 You should see:
-- Marketplace: `adrian-skills-marketplace`
-- Plugin: `adrian-skills` (version 1.0.0)
+- Marketplace: `LLM-Research-Marketplace`
+- Plugin: `llm-research` (version 1.0.0)
 
 ## Using Skills
 
@@ -112,20 +112,20 @@ You can customize the skill behavior via `config/config.json`:
 
 ```bash
 # In terminal
-claude plugin update adrian-skills
+claude plugin update llm-research
 
 # In Claude Code session
-/plugin update adrian-skills
+/plugin update llm-research
 ```
 
 ### Uninstall
 
 ```bash
 # In terminal
-claude plugin uninstall adrian-skills
+claude plugin uninstall llm-research
 
 # In Claude Code session
-/plugin uninstall adrian-skills
+/plugin uninstall llm-research
 ```
 
 ### Reinstall
@@ -134,10 +134,10 @@ If you need to reinstall:
 
 ```bash
 # Remove marketplace
-claude plugin marketplace remove adrian-skills-marketplace
+claude plugin marketplace remove LLM-Research-Marketplace
 
 # Remove plugin
-claude plugin uninstall adrian-skills
+claude plugin uninstall llm-research
 
 # Reinstall
 ./install.sh
@@ -179,13 +179,13 @@ If updates don't apply:
 
 1. Uninstall completely:
    ```bash
-   claude plugin uninstall adrian-skills
-   claude plugin marketplace remove adrian-skills-marketplace
+   claude plugin uninstall llm-research
+   claude plugin marketplace remove LLM-Research-Marketplace
    ```
 
 2. Reinstall:
    ```bash
-   cd /path/to/adrian-marketplace
+   cd /path/to/llm-research-marketplace
    ./install.sh
    ```
 
@@ -209,7 +209,7 @@ If updates don't apply:
 
 3. Test locally:
    ```bash
-   claude plugin update adrian-skills
+   claude plugin update llm-research
    ```
 
 ### Local Development
@@ -217,7 +217,7 @@ If updates don't apply:
 For development on skills:
 
 ```bash
-cd /path/to/adrian-marketplace
+cd /path/to/llm-research-marketplace
 git pull  # Get latest changes
 
 # Make your edits to skills/*.md
@@ -233,5 +233,5 @@ See the [README.md](README.md) for detailed examples of using the research-memor
 ## Support
 
 For issues or questions:
-- GitHub Issues: [syfyufei/adrian-marketplace](https://github.com/syfyufei/adrian-marketplace/issues)
+- GitHub Issues: [syfyufei/llm-research-marketplace](https://github.com/syfyufei/llm-research-marketplace/issues)
 - Individual skill repos: [syfyufei/research-memory](https://github.com/syfyufei/research-memory)

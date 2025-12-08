@@ -1,6 +1,6 @@
-# Adrian Skills
+# LLM Research Marketplace
 
-A curated collection of Claude Code skills for research and development workflows, following the [superpowers](https://github.com/obra/superpowers) marketplace pattern.
+A curated marketplace of Claude Code skills for AI/LLM research and development workflows, following the [superpowers](https://github.com/obra/superpowers) marketplace pattern.
 
 ## Available Skills
 
@@ -46,13 +46,13 @@ Natural language:
 In Claude Code, register the marketplace first:
 
 ```bash
-/plugin marketplace add syfyufei/adrian-marketplace
+/plugin marketplace add syfyufei/llm-research-marketplace
 ```
 
 Then install the plugin from this marketplace:
 
 ```bash
-/plugin install adrian-skills@adrian-skills-marketplace
+/plugin install llm-research@LLM-Research-Marketplace
 ```
 
 ### Verify Installation
@@ -84,7 +84,7 @@ All skills will be available for use immediately via slash commands or natural l
 This is a monorepo following the superpowers pattern:
 
 ```
-adrian-marketplace/
+llm-research-marketplace/
 ├── .claude-plugin/
 │   ├── marketplace.json      # Marketplace definition
 │   └── plugin.json          # Plugin metadata
@@ -136,10 +136,10 @@ After installation, skills are automatically available in Claude Code sessions. 
 claude plugin list
 
 # Update to latest version
-claude plugin update adrian-skills
+claude plugin update llm-research
 
 # Uninstall
-claude plugin uninstall adrian-skills
+claude plugin uninstall llm-research
 ```
 
 ## Contributing
