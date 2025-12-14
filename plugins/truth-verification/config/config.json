@@ -69,7 +69,26 @@
     "include_anomalies": true,
     "include_recommendations": true,
     "default_format": "markdown",
-    "supported_formats": ["markdown", "json", "html"]
+    "supported_formats": ["markdown", "json", "html"],
+    "anomaly_detection_enabled": true,
+    "anomaly_sensitivity": "medium",
+    "anomaly_types": ["modified_data", "missing_files", "broken_chains", "orphaned_data", "unusual_patterns"],
+    "timeline_granularity": "minute"
+  },
+
+  "dependency_graph_settings": {
+    "enabled": true,
+    "detect_cycles": true,
+    "validate_completeness": true,
+    "build_lineage_chains": true,
+    "max_chain_depth": 100
+  },
+
+  "research_memory_integration": {
+    "enabled": true,
+    "log_track_events": true,
+    "tag_prefix": "#data-tracking",
+    "auto_log_milestones": true
   },
 
   "performance_settings": {

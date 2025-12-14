@@ -1,7 +1,7 @@
 # truth-verification Skill
 
-**Version**: 0.1.0
-**Status**: Active
+**Version**: 0.4.0
+**Status**: Production Ready
 **Last Updated**: 2025-12-15
 
 ## Overview

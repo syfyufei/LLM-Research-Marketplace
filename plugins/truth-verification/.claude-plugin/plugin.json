@@ -1,6 +1,6 @@
 {
   "name": "truth-verification",
-  "version": "0.1.0",
+  "version": "0.4.0",
   "description": "Ensure research integrity by tracking data provenance, verifying authenticity, and preventing fabricated claims",
   "author": {
     "name": "Adrian",

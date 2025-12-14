@@ -40,7 +40,7 @@
     {
       "name": "truth-verification",
       "description": "Ensure research integrity by tracking data provenance, verifying authenticity, and preventing fabricated claims.",
-      "version": "0.1.0",
+      "version": "0.4.0",
       "source": "plugins/truth-verification",
       "author": {
         "name": "Adrian",
