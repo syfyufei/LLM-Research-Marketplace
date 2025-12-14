@@ -1,81 +1,79 @@
 # LLM Research Marketplace
 
-LLM Research Marketplace v2.0.0 bundles three Claude Code skills—research-memory, project-management, and skill-squared—into a single plugin with 18 namespaced commands. The marketplace converts all prior Python handlers into declarative markdown specifications so Claude can execute workflows with its native Read/Write/Edit/Bash tools.
+LLM Research Marketplace is a curated collection of three independent Claude Code skills: `research-memory`, `project-management`, and `skill-squared`. Instead of a single large plugin, this repository acts as a marketplace, allowing you to install only the skills you need.
 
 ## Marketplace Snapshot
 
 | Skill | Version | Purpose | Commands |
 | --- | --- | --- | --- |
 | research-memory | 0.2.0 | Academic research memory management | 10 |
-| project-management | 0.1.0 | Standardized project scaffolding, restructuring, validation | 4 |
-| skill-squared | 0.1.0 | Skill creation, extension, sync, and validation | 4 |
+| project-management | 0.1.0 | Standardized project scaffolding & validation | 4 |
+| skill-squared | 0.1.0 | Skill creation, extension, and validation | 4 |
 
-Total commands: **18** – all registered via `.claude/commands/<skill>/<command>.md`.
+Total commands available: **18**
 
 ## Installation
 
-In a Claude Code terminal:
+First, add the repository as a new marketplace. You can do this by running the local script or by adding it manually within Claude Code.
 
-```bash
-/plugin marketplace add syfyufei/llm-research-marketplace
-/plugin install llm-research@LLM-Research-Marketplace
-```
-
-Alternatively, run the included script locally:
-
+**Option A: Run the script**
 ```bash
 ./install.sh
+```
+This will add the local directory as a marketplace named `LLM-Research-Marketplace`.
+
+**Option B: Manual Install**
+```bash
+/plugin marketplace add https://github.com/syfyufei/llm-research-marketplace
+```
+
+### Install Individual Skills
+
+Once the marketplace is added, you can search for and install the skills you want:
+
+```bash
+# See what's available
+/plugin marketplace search LLM-Research-Marketplace
+
+# Install one or more skills
+/plugin install research-memory@LLM-Research-Marketplace
+/plugin install project-management@LLM-Research-Marketplace
+/plugin install skill-squared@LLM-Research-Marketplace
 ```
 
 ### Verify Installation
 
+Check your installed plugins:
 ```bash
 /plugin list
-/help
 ```
-
-`/help` should show the 18 commands across three namespaces:
-
-- `/research-memory:*` (10 commands)
-- `/project-management:*` (4 commands)
-- `/skill-squared:*` (4 commands)
+If you installed all three, the output should show `research-memory`, `project-management`, and `skill-squared`.
 
 ## Quick Start Workflow
 
-1. **Create a project workspace** – `/project-management:create` scaffolds directories, templates, and optional Git init.
-2. **Standardize legacy repos** – `/project-management:restructure` backs up and normalizes inherited projects.
-3. **Track research progress** – `/research-memory:bootstrap`, `:remember`, and `:query` manage dev logs, decisions, and plans.
-4. **Build new skills** – `/skill-squared:create` + `/skill-squared:command` scaffold and extend new Claude Code skills.
-5. **Sync skills back** – `/skill-squared:sync` copies artifacts into this marketplace, while `/skill-squared:validate` keeps everything compliant.
-
-## Command Reference
-
-### research-memory Commands
-`bootstrap`, `checkpoint`, `focus`, `insights`, `query`, `remember`, `review`, `status`, `summary`, `timeline`
-
-### project-management Commands
-`create`, `restructure`, `validate`, `status`
-
-### skill-squared Commands
-`create`, `command`, `sync`, `validate`
-
-See `docs/*.md` for deep dives and usage examples.
+1. **Install the skills you need** – See the Installation section above.
+2. **Create a project workspace** – `/project-management:create` scaffolds directories and templates.
+3. **Track research progress** – `/research-memory:bootstrap` and `/research-memory:remember` manage development logs.
+4. **Build new skills** – `/skill-squared:create` scaffolds a new, standalone Claude Code skill.
 
 ## Directory Layout
+
+The repository is now structured as a marketplace containing multiple plugins.
 
 ```
 llm-research-marketplace/
 ├── .claude-plugin/
-│   ├── marketplace.json
-│   └── plugin.json     # Version 2.0.0 with 3 skills / 18 commands
-├── .claude/commands/
+│   └── marketplace.json      # Defines the marketplace and points to the plugins
+├── plugins/
 │   ├── research-memory/
+│   │   ├── .claude-plugin/
+│   │   │   └── plugin.json   # Defines the 'research-memory' plugin
+│   │   ├── commands/         # 10 command files
+│   │   └── research-memory.md
 │   ├── project-management/
+│   │   └── ...               # Structure for 'project-management' plugin
 │   └── skill-squared/
-├── skills/
-│   ├── research-memory.md
-│   ├── project-management.md
-│   └── skill-squared.md
+│       └── ...               # Structure for 'skill-squared' plugin
 ├── templates/
 │   ├── project/
 │   └── skill/
@@ -86,36 +84,22 @@ llm-research-marketplace/
 │   ├── project-management.md
 │   └── skill-squared.md
 ├── install.sh
-├── ARCHITECTURE.md
-├── USAGE.md
 └── README.md
 ```
 
-## Configuration & Templates
-
-- `config/marketplace-config.json` centralizes versions, structure requirements, validation weights, and sync defaults.
-- `templates/project/` renders README/gitignore/project.yml/.project-config.json for `/project-management:*` commands.
-- `templates/skill/` powers `/skill-squared:create` and `/skill-squared:command` (plugin.json, marketplace.json, skill markdown, README, install script, CLAUDE.md, command template).
-
-## Documentation Set
-
-- `docs/research-memory.md` – Phase logging, memory file expectations, and best practices.
-- `docs/project-management.md` – Blueprint, validation scoring, and restructuring notes.
-- `docs/skill-squared.md` – Template engine, sync semantics, validation checklist.
-- `ARCHITECTURE.md` – Multi-skill marketplace pattern, namespacing, and sync relationships.
-- `USAGE.md` – Scenario-based walkthroughs and troubleshooting.
-
 ## Management Commands
+
+Manage each skill individually.
 
 ```bash
 # List installed plugins
-claude plugin list
+/plugin list
 
-# Update to the latest marketplace release
-claude plugin update llm-research
+# Update a specific skill to its latest version
+/plugin update research-memory
 
-# Remove if needed
-claude plugin uninstall llm-research
+# Remove a skill you no longer need
+/plugin uninstall project-management
 ```
 
 ## Development Notes
@@ -128,4 +112,4 @@ claude plugin uninstall llm-research
 
 ## License
 
-MIT License applies to the marketplace. Individual skill templates inherit the same license.
+MIT License applies to the marketplace and all included skills.

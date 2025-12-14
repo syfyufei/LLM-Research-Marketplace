@@ -1,0 +1,22 @@
+{
+  "name": "project-management",
+  "description": "A skill for standardized project scaffolding, restructuring, and validation.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Adrian",
+    "email": "syfyufei@gmail.com"
+  },
+  "homepage": "https://github.com/syfyufei/llm-research-marketplace",
+  "repository": "https://github.com/syfyufei/llm-research-marketplace",
+  "license": "MIT",
+  "keywords": ["project", "management", "scaffolding", "validation"],
+  "skills": [
+    "../project-management.md"
+  ],
+  "commands": [
+    "../commands/create.md",
+    "../commands/restructure.md",
+    "../commands/validate.md",
+    "../commands/status.md"
+  ]
+}

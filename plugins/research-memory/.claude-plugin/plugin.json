@@ -1,0 +1,28 @@
+{
+  "name": "research-memory",
+  "description": "A skill for academic research memory management.",
+  "version": "0.2.0",
+  "author": {
+    "name": "Adrian",
+    "email": "syfyufei@gmail.com"
+  },
+  "homepage": "https://github.com/syfyufei/llm-research-marketplace",
+  "repository": "https://github.com/syfyufei/llm-research-marketplace",
+  "license": "MIT",
+  "keywords": ["research", "memory", "academic", "llm"],
+  "skills": [
+    "../research-memory.md"
+  ],
+  "commands": [
+    "../commands/bootstrap.md",
+    "../commands/checkpoint.md",
+    "../commands/focus.md",
+    "../commands/insights.md",
+    "../commands/query.md",
+    "../commands/remember.md",
+    "../commands/review.md",
+    "../commands/status.md",
+    "../commands/summary.md",
+    "../commands/timeline.md"
+  ]
+}

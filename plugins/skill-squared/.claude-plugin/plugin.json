@@ -1,0 +1,22 @@
+{
+  "name": "skill-squared",
+  "description": "A skill for skill creation, extension, sync, and validation.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Adrian",
+    "email": "syfyufei@gmail.com"
+  },
+  "homepage": "https://github.com/syfyufei/llm-research-marketplace",
+  "repository": "https://github.com/syfyufei/llm-research-marketplace",
+  "license": "MIT",
+  "keywords": ["skill", "development", "claude", "tool"],
+  "skills": [
+    "../skill-squared.md"
+  ],
+  "commands": [
+    "../commands/create.md",
+    "../commands/command.md",
+    "../commands/sync.md",
+    "../commands/validate.md"
+  ]
+}

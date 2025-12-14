@@ -7,10 +7,30 @@
   },
   "plugins": [
     {
-      "name": "llm-research",
-      "description": "Collection of skills for AI/LLM research and development workflows",
-      "version": "1.0.0",
-      "source": "./",
+      "name": "research-memory",
+      "description": "A skill for academic research memory management.",
+      "version": "0.2.0",
+      "source": "./plugins/research-memory",
+      "author": {
+        "name": "Adrian",
+        "email": "syfyufei@gmail.com"
+      }
+    },
+    {
+      "name": "project-management",
+      "description": "A skill for standardized project scaffolding, restructuring, and validation.",
+      "version": "0.1.0",
+      "source": "./plugins/project-management",
+      "author": {
+        "name": "Adrian",
+        "email": "syfyufei@gmail.com"
+      }
+    },
+    {
+      "name": "skill-squared",
+      "description": "A skill for skill creation, extension, sync, and validation.",
+      "version": "0.1.0",
+      "source": "./plugins/skill-squared",
       "author": {
         "name": "Adrian",
         "email": "syfyufei@gmail.com"
