@@ -51,7 +51,7 @@
       "name": "academic-figures",
       "description": "Generate publication-ready academic figures with grayscale styling and Chinese font support.",
       "version": "0.1.0",
-      "source": "plugins/academic-figures",
+      "source": "./plugins/academic-figures",
       "author": {
         "name": "Adrian",
         "email": "syfyufei@gmail.com"
