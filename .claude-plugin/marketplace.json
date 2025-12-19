@@ -1,7 +1,7 @@
 {
   "name": "LLM-Research-Marketplace",
   "description": "Curated marketplace of Claude Code skills for AI/LLM research and development",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "owner": {
     "name": "Adrian",
     "email": "syfyufei@gmail.com"
@@ -42,6 +42,16 @@
       "description": "Ensure research integrity by tracking data provenance, verifying authenticity, and preventing fabricated claims.",
       "version": "1.0.0",
       "source": "plugins/truth-verification",
+      "author": {
+        "name": "Adrian",
+        "email": "syfyufei@gmail.com"
+      }
+    },
+    {
+      "name": "academic-figures",
+      "description": "Generate publication-ready academic figures with grayscale styling and Chinese font support.",
+      "version": "0.1.0",
+      "source": "plugins/academic-figures",
       "author": {
         "name": "Adrian",
         "email": "syfyufei@gmail.com"

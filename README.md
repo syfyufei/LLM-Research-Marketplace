@@ -1,6 +1,6 @@
 # LLM Research Marketplace
 
-LLM Research Marketplace is a curated collection of four independent Claude Code skills: `research-memory`, `project-management`, `skill-squared`, and `truth-verification`. Instead of a single large plugin, this repository acts as a marketplace, allowing you to install only the skills you need.
+LLM Research Marketplace is a curated collection of five independent Claude Code skills: `research-memory`, `project-management`, `skill-squared`, `truth-verification`, and `academic-figures`. Instead of a single large plugin, this repository acts as a marketplace, allowing you to install only the skills you need.
 
 ## Marketplace Snapshot
 
@@ -10,8 +10,9 @@ LLM Research Marketplace is a curated collection of four independent Claude Code
 | project-management | 0.1.0 | Standardized project scaffolding & validation | 4 |
 | skill-squared | 0.1.0 | Skill creation, extension, and validation | 4 |
 | truth-verification | 1.0.0 | Research integrity & data provenance tracking | 8 |
+| academic-figures | 0.1.0 | Publication-ready figures with grayscale & Chinese support | 6 |
 
-Total commands available: **26**
+Total commands available: **32**
 
 ## Installation
 
@@ -49,6 +50,7 @@ Once the marketplace is added, you can search for and install the skills you wan
 /plugin install project-management@LLM-Research-Marketplace
 /plugin install skill-squared@LLM-Research-Marketplace
 /plugin install truth-verification@LLM-Research-Marketplace
+/plugin install academic-figures@LLM-Research-Marketplace
 ```
 
 ### Verify Installation
@@ -57,7 +59,7 @@ Check your installed plugins:
 ```bash
 /plugin list
 ```
-If you installed all four, the output should show `research-memory`, `project-management`, `skill-squared`, and `truth-verification`.
+If you installed all five, the output should show `research-memory`, `project-management`, `skill-squared`, `truth-verification`, and `academic-figures`.
 
 ## Quick Start Workflow
 
@@ -65,7 +67,8 @@ If you installed all four, the output should show `research-memory`, `project-ma
 2. **Ensure research integrity** – `/truth-verification:init` and `/truth-verification:register` establish data provenance tracking.
 3. **Create a project workspace** – `/project-management:create` scaffolds directories and templates.
 4. **Track research progress** – `/research-memory:bootstrap` and `/research-memory:remember` manage development logs.
-5. **Build new skills** – `/skill-squared:create` scaffolds a new, standalone Claude Code skill.
+5. **Generate publication figures** – `/academic-figures:line`, `/academic-figures:bar`, `/academic-figures:dotwhisker` create grayscale charts.
+6. **Build new skills** – `/skill-squared:create` scaffolds a new, standalone Claude Code skill.
 
 ## Directory Layout
 
@@ -74,7 +77,7 @@ The repository is now structured as a marketplace containing multiple plugins.
 ```
 llm-research-marketplace/
 ├── .claude-plugin/
-│   └── marketplace.json              # Marketplace definition with 4 plugins
+│   └── marketplace.json              # Marketplace definition with 5 plugins
 ├── plugins/
 │   ├── research-memory/
 │   │   ├── .claude-plugin/plugin.json
@@ -96,14 +99,22 @@ llm-research-marketplace/
 │   │   ├── config/config.json
 │   │   ├── docs/
 │   │   └── skill-squared.md
-│   └── truth-verification/
+│   ├── truth-verification/
+│   │   ├── .claude-plugin/plugin.json
+│   │   ├── commands/                 # 8 command files
+│   │   ├── templates/truth/          # Bundled templates
+│   │   ├── config/config.json
+│   │   ├── docs/
+│   │   ├── README.md
+│   │   └── truth-verification.md
+│   └── academic-figures/
 │       ├── .claude-plugin/plugin.json
-│       ├── commands/                 # 8 command files
-│       ├── templates/truth/          # Bundled templates
+│       ├── commands/                 # 6 command files
+│       ├── templates/python/         # Python code templates
 │       ├── config/config.json
 │       ├── docs/
 │       ├── README.md
-│       └── truth-verification.md
+│       └── academic-figures.md
 ├── docs/                             # Marketplace-level docs
 ├── install.sh
 ├── ARCHITECTURE.md
@@ -158,6 +169,14 @@ Skill creation, extension, sync, and validation for Claude Code.
 - Bundled skill templates
 - Marketplace integration
 
+### academic-figures (v0.1.0) - NEW!
+Generate publication-ready academic figures with grayscale styling and Chinese font support.
+- **6 commands** for line charts, bar charts, dot-whisker plots, scatter plots, and maps
+- Grayscale/B&W styling suitable for academic publishing
+- Full Chinese character support (STFangsong font)
+- 300 DPI high-resolution output (PDF + PNG)
+- [Documentation](plugins/academic-figures/README.md)
+
 ## Development Notes
 
 - Source repositories remain available for deep development:
@@ -185,17 +204,18 @@ If you previously installed the unified "llm-research" plugin version 2.x:
 
 3. **Install the plugins you need**:
    ```bash
-   # You can now install plugins individually or all four:
+   # You can now install plugins individually or all five:
    /plugin install research-memory@LLM-Research-Marketplace
    /plugin install project-management@LLM-Research-Marketplace
    /plugin install skill-squared@LLM-Research-Marketplace
    /plugin install truth-verification@LLM-Research-Marketplace
+   /plugin install academic-figures@LLM-Research-Marketplace
    ```
 
 4. **Verify the new structure**:
    ```bash
-   /plugin list       # Should show 4 separate plugins
-   /help              # Should show 26 commands (or fewer if you installed selectively)
+   /plugin list       # Should show 5 separate plugins
+   /help              # Should show 32 commands (or fewer if you installed selectively)
    ```
 
 ### What Changed in v3.x
