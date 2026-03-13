@@ -142,7 +142,7 @@ For scatter plots and line endpoints:
 ### Output
 
 - Default resolution: 300 DPI
-- Default formats: PDF (vector) and PNG (raster)
+- Default format: PNG
 - Default size: 6" × 4"
 - Default location: `paper/figures/`
 

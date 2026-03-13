@@ -13,7 +13,7 @@ A Claude Code skill for generating publication-ready figures suitable for academ
 - **Chinese Support**: Proper rendering of Chinese characters using STFangsong or fallback fonts
 - **Multiple Chart Types**: Line charts, bar charts, dot-whisker plots, scatter plots, and maps
 - **Publication Ready**: 300 DPI output, proper sizing, clean academic aesthetics
-- **Dual Format**: Outputs both PDF (vector) and PNG (raster) by default
+- **PNG Output**: High-resolution PNG (300 DPI) by default
 
 ## Chart Types
 
